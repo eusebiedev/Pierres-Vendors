@@ -7,18 +7,18 @@ namespace PierresVendors.Models
     public string Title { get; set; }
     public string Information { get; set; }
     public string Date { get; set; }
-    public int Price { get; set; }
+    public decimal Price { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order(string title, string information, string date, int price)
+    public Order(string title, string information, string date, decimal price)
     {
       Title = title;
       Information = information;
       Date = date;
       Price = price;
-      _instances.Add(this);
       Id = _instances.Count;
+      _instances.Add(this);
     }
 
     public static void ClearAll()
@@ -33,7 +33,7 @@ namespace PierresVendors.Models
 
     public static Order Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId];
     }
   }
 }
