@@ -2,26 +2,35 @@
 
 #### By _**Eusebie Siebenberg**_
 
-## Description
-
- 
+#### An independent school project showcasing coding skills focused on creating an interactive MVC (model, view, controller) Application, following RESTful conventions and best practices.
 
 ## Technologies Used
 
 * _C#_
 * _Razor_
+* _MSTest_
 * _ASP.NET Core MVC_
 * _VS Code_
 * _.NET6_
 * _Command Line_
 
+## Description
 
-## How To Run This Project
+_Pierres Vendors is an application built to allow the user to create new Vendors, and Orders for said Vendors, to help him keep track of his expanding business relationships. A vendor and order tracking system!
 
-1. Clone this repo.
-2. Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory called "CarDealer". 
-3. Run `dotnet watch run`.
-4. Open the browser to https://localhost:5001. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS
+
+## Setup/Installation Requirements
+
+* _Open your shell of choice (e.g., Terminal or GitBash) and run these commands in order:_
+* _Clone this repository by running $ `git clone https://github.com/user/examplerepo.git` (replace url with link copied from github)_
+* _Navigate to this project's production directory called "PierresVendors" with $ `cd PierresVendors`._
+* _Build the projects necessary components using $ `dotnet build`_
+* _Start the application with this command $ `dotnet watch run`._
+
+## Optionally to run tests using MSTest
+
+* _Navigate to the PierresVendors.Tests directory with $ `cd PierresVendors.Tests`_
+* _Run $ `dotnet test` to run through the supplied test for each model._
 
 ## Known Bugs 
 
