@@ -7,23 +7,25 @@ namespace PierresVendors.Controllers
 {
   public class VendorsController : Controller
   {
-    // [HttpGet("/vendors")]
-    // public ActionResult Index()
-    // {
-    //   List<Vendor> allVendors = Vendor.GetAll();
-    //   return View(allVendors);
-    // }
-    // [HttpGet("/categories/new")]
-    // public ActionResult New()
-    // {
-    //   return View();
-    // }
-    // [HttpPost("/categories")]
-    // public ActionResult Create(string categoryName)
-    // {
-    //   Category newCategory = new Category(categoryName);
-    //   return RedirectToAction("Index");
-    // }
+    [HttpGet("/vendors")]
+    public ActionResult Index()
+    {
+      List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
+    }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string vendorDescription)
+    {
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      return RedirectToAction("Index");
+    }
 
     // [HttpGet("/categories/{id}")]
     // public ActionResult Show(int id)
