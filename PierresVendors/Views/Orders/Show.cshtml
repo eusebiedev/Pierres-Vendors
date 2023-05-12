@@ -10,11 +10,11 @@
       crossorigin="anonymous">
   </head>
   <body class="p-3 m-0">
-    <h1>Here are the Order details:</h1>
-    <p>@Model.["order"].Title</p>
-    <p>@Model.["order"].Information</p>
-    <p>@Model.["order"].Date</p>
-    <p>@Model.["order"].Price</p>
+    <h1>Here are the Order details for @Model["vendor"].Name:</h1>
+    <p>@Model["order"].Title</p>
+    <p>@Model["order"].Information</p>
+    <p>@Model["order"].Date</p>
+    <p>@Model["order"].Price</p>
     <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Click here to add another order</a></p>
     <p><a href='/vendors/@Model["vendor"].Id/'>Back to view this Vendors Orders</a></p>
     <a href='/vendors'>View complete list of Vendors</a>
