@@ -11,12 +11,19 @@
   </head>
   <body>
   <h1>Please use the form below to add a new order for @Model.Name</h1>
-
-    @* <form action="/categories/@Model.Id/items" method="post">
-      <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
-      <label for="itemDescription">Item Description</label>
-      <input id="itemDescription" name="itemDescription" type="text">
-      <button type='submit'>Add Item</button>
-    </form> *@
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id"><br>
+      <label for="orderTitle">Title:</label>
+      <input id="orderTitle" name="orderTitle" type="text"><br>
+      <label for="orderInformation">Order Information:</label>
+      <input id="orderInformation" name="orderInformation" type="text"><br>
+      <label for="orderDate">Date:</label>
+      <input id="orderDate" name="orderDate" type="text"><br>
+      <label for="orderPrice">Price:</label>
+      <input id="orderPrice" name="orderPrice" type="text"><br>
+      <button type='submit'>Add Order</button>
+      <p><a href="/vendors">Click here to go back to Pierres Vendor's List</a></p>
+      <p><a href="/">Back to Home</a></p>
+    </form>
   </body>
 </html>
