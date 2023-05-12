@@ -25,7 +25,7 @@ namespace PierresVendors.Tests
     public void VendorInformation_CreatesNameAndDescription_String()
     {
       string name = "Pierres Bagels";
-      string description = "Athentic bagels from the NW";
+      string description = "Authentic bagels from the NW";
       Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       string result2 = newVendor.Description;
@@ -38,27 +38,24 @@ namespace PierresVendors.Tests
     public void GetVendorId_ReturnsVendorId_Int()
     {
       string name = "Pierres Bagels";
-      string description = "Athentic bagels from the NW";
+      string description = "Authentic bagels from the NW";
       Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
-  //   [TestMethod]
-  //   public void GetAll_ReturnsAllCategoryObjects_CategoryList()
-  //   {
-  //     //Arrange
-  //     string name01 = "Work";
-  //     string name02 = "School";
-  //     Category newCategory1 = new Category(name01);
-  //     Category newCategory2 = new Category(name02);
-  //     List<Category> newList = new List<Category> { newCategory1, newCategory2 };
-
-  //     //Act
-  //     List<Category> result = Category.GetAll();
-
-  //     //Assert
-  //     CollectionAssert.AreEqual(newList, result);
-  //   }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorsObjects_VendorList()
+    {
+      string name1 = "Pierres Bagels";
+      string name2 = "Authentic bagels from the NW";
+      string description1 = "Pierres Lox";
+      string description2 = "Authentic Lox the NW";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   //   [TestMethod]
   //   public void Find_ReturnsCorrectCategory_Category()
