@@ -6,7 +6,7 @@ using System;
 namespace PierresVendors.Tests
 {
   [TestClass]
-  public class OrderTests //: IDisposable
+  public class OrderTests : IDisposable
   {
 
     public void Dispose()
@@ -53,18 +53,13 @@ namespace PierresVendors.Tests
       Assert.AreEqual(updatedInformation, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_ItemList()
-    // {
-    //   // Arrange
-    //   List<Item> newList = new List<Item> { };
-
-    //   // Act
-    //   List<Item> result = Item.GetAll();
-
-    //   // Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsItems_ItemList()
@@ -75,11 +70,7 @@ namespace PierresVendors.Tests
     //   Item newItem1 = new Item(description01);
     //   Item newItem2 = new Item(description02);
     //   List<Item> newList = new List<Item> { newItem1, newItem2 };
-
-    //   //Act
     //   List<Item> result = Item.GetAll();
-
-    //   //Assert
     //   CollectionAssert.AreEqual(newList, result);
     // }
 
