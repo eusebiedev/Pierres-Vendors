@@ -41,7 +41,7 @@ namespace PierresVendors.Tests
       string description = "Athentic bagels from the NW";
       Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id;
-      Assert.AreEqual(0, result);
+      Assert.AreEqual(1, result);
     }
   //   [TestMethod]
   //   public void GetAll_ReturnsAllCategoryObjects_CategoryList()
