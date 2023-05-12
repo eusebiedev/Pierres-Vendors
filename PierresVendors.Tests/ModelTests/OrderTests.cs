@@ -17,7 +17,7 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("Pierres Bagels", "12 sesame bagels", "May 12, 2023", 25);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
