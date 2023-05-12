@@ -4,12 +4,12 @@ namespace PierresVendors.Models
 {
   public class Order
   {
-    private static List<Order> _instances = new List<Order> {};
     public string Title { get; set; }
     public string Information { get; set; }
     public string Date { get; set; }
     public int Price { get; set; }
     public int Id { get; }
+    private static List<Order> _instances = new List<Order> {};
 
     public Order(string title, string information, string date, int price)
     {
