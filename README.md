@@ -16,7 +16,7 @@
 
 ## Description
 
-_Pierres Vendors is an application built to allow the user to create new Vendors, and Orders for said Vendors, to help him keep track of his expanding business relationships. A vendor and order tracking system!
+_Pierres Vendors is an application built to allow the user to create new Vendors, and Orders for said Vendors, to help him keep track of his expanding business relationships. A vendor and order tracking system!_
 
 
 ## Setup/Installation Requirements
