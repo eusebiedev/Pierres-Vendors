@@ -33,8 +33,10 @@ namespace PierresVendors.Tests
       string result2 = newOrder.Information;
       string result3 = newOrder.Date;
       int result4 = newOrder.Price;
-      
       Assert.AreEqual(title, result1);
+      Assert.AreEqual(information, result2);
+      Assert.AreEqual(date, result3);
+      Assert.AreEqual(price, result4);
     }
 
     // [TestMethod]
