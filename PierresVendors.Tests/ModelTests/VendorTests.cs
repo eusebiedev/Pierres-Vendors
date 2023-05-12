@@ -29,7 +29,8 @@ namespace PierresVendors.Tests
       Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       string result2 = newVendor.Description;
-      Assert.AreEqual(name, description, result, result2);
+      Assert.AreEqual(name, result);
+      Assert.AreEqual(description, result2);
     
     }
 
