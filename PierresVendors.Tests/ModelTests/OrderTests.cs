@@ -39,21 +39,19 @@ namespace PierresVendors.Tests
       Assert.AreEqual(price, result4);
     }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-
-    //   //Act
-    //   string updatedDescription = "Do the dishes";
-    //   newItem.Description = updatedDescription;
-    //   string result = newItem.Description;
-
-    //   //Assert
-    //   Assert.AreEqual(updatedDescription, result);
-    // }
+    [TestMethod]
+    public void SetOrderDescription_SetDescription_String()
+    {
+      string title = "Pierres Bagels";
+      string information = "12 sesame bagels";
+      string date = "May 12, 2023";
+      int price = 25;
+      Order newOrder = new Order(title, information, date, price);
+      string updatedInformation = "24 poppy seed bagels";
+      newOrder.Information = updatedInformation;
+      string result = newOrder.Information;
+      Assert.AreEqual(updatedInformation, result);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsEmptyList_ItemList()
