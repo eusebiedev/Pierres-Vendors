@@ -61,18 +61,23 @@ namespace PierresVendors.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsItems_ItemList()
-    // {
-    //   //Arrange
-    //   string description01 = "Walk the dog";
-    //   string description02 = "Wash the dishes";
-    //   Item newItem1 = new Item(description01);
-    //   Item newItem2 = new Item(description02);
-    //   List<Item> newList = new List<Item> { newItem1, newItem2 };
-    //   List<Item> result = Item.GetAll();
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrdersList()
+    {
+      string title1 = "Pierres Bagels";
+      string information1 = "12 sesame bagels";
+      string date1 = "May 12, 2023";
+      int price1 = 25;
+      string title2 = "Pierres Bagels";
+      string information2 = "24 poppy seed bagels";
+      string date2 = "May 13, 2023";
+      int price2 = 50;
+      Order newOrder1 = new Order(title1, information1, date1, price1);
+      Order newOrder2 = new Order(title2, information2, date2, price2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
     // [TestMethod]
     // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
