@@ -6,13 +6,13 @@ using System;
 namespace PierresVendors.Tests
 {
   [TestClass]
-  public class VendorTests //: IDisposable
+  public class VendorTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
 
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -34,19 +34,15 @@ namespace PierresVendors.Tests
     
     }
 
-  //   [TestMethod]
-  //   public void GetId_ReturnsCategoryId_Int()
-  //   {
-  //     //Arrange
-  //     string name = "Test Category";
-  //     Category newCategory = new Category(name);
-
-  //     //Act
-  //     int result = newCategory.Id;
-
-  //     //Assert
-  //     Assert.AreEqual(1, result);
-  //   }
+    [TestMethod]
+    public void GetVendorId_ReturnsVendorId_Int()
+    {
+      string name = "Pierres Bagels";
+      string description = "Athentic bagels from the NW";
+      Vendor newVendor = new Vendor(name, description);
+      int result = newVendor.Id;
+      Assert.AreEqual(0, result);
+    }
   //   [TestMethod]
   //   public void GetAll_ReturnsAllCategoryObjects_CategoryList()
   //   {
