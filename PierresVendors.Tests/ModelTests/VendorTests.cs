@@ -17,23 +17,21 @@ namespace PierresVendors.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("Pierres Bagels", "Authentic bagels from northwest");
+      Vendor newVendor = new Vendor("Pierres Bagels", "Authentic bagels from the NW");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-  //   [TestMethod]
-  //   public void GetName_ReturnsName_String()
-  //   {
-  //     //Arrange
-  //     string name = "Test Category";
-  //     Category newCategory = new Category(name);
-
-  //     //Act
-  //     string result = newCategory.Name;
-
-  //     //Assert
-  //     Assert.AreEqual(name, result);
-  //   }
+    [TestMethod]
+    public void VendorInformation_CreatesNameAndDescription_String()
+    {
+      string name = "Pierres Bagels";
+      string description = "Athentic bagels from the NW";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Name;
+      string result2 = newVendor.Description;
+      Assert.AreEqual(name, description, result, result2);
+    
+    }
 
   //   [TestMethod]
   //   public void GetId_ReturnsCategoryId_Int()
