@@ -8,7 +8,7 @@ namespace PierresVendors.Models
     public int Id { get; }
     public string Description { get; set; }
     private static List<Vendor> _instances = new List<Vendor> { };
-    // public List<Orders> Orders { get; set; }
+    public List<Order> Orders { get; set; }
 
 
     public Vendor(string name, string description)
@@ -17,22 +17,27 @@ namespace PierresVendors.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
-      // Orders = new List<Orders>{};
+      Orders = new List<Order>{};
     }
 
-    // public static List<Item> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
 
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
 
-    //   public static Item Find(int searchId)
-    // {
-    //   return _instances[searchId-1];
-    // }
+    public static Vendor Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
