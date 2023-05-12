@@ -9,7 +9,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
   </head>
-  <body>
+  <body class="p-3 m-0">
   <h1>Please use the form below to add a new order for @Model.Name</h1>
     <form action="/vendors/@Model.Id/orders" method="post">
       <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id"><br>
@@ -20,8 +20,8 @@
       <label for="orderDate">Date:</label>
       <input id="orderDate" name="orderDate" type="text"><br>
       <label for="orderPrice">Price:</label>
-      <input id="orderPrice" name="orderPrice" type="text"><br>
-      <button type='submit'>Add Order</button>
+      <input id="orderPrice" name="orderPrice" type="text"><br><br>
+      <button type='submit'>Add Order</button><br><br>
       <p><a href="/vendors">Click here to go back to Pierres Vendor's List</a></p>
       <p><a href="/">Back to Home</a></p>
     </form>
