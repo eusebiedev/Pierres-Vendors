@@ -21,19 +21,21 @@ namespace PierresVendors.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-
-    //   //Act
-    //   Item newItem = new Item(description);
-    //   string result = newItem.Description;
-
-    //   //Assert
-    //   Assert.AreEqual(description, result);
-    // }
+    [TestMethod]
+    public void GetOrderInformation_ReturnsInformation_String()
+    {
+      string title = "Pierres Bagels";
+      string information = "12 sesame bagels";
+      string date = "May 12, 2023";
+      int price = 25;
+      Order newOrder = new Order(title, information, date, price);
+      string result1 = newOrder.Title;
+      string result2 = newOrder.Information;
+      string result3 = newOrder.Date;
+      int result4 = newOrder.Price;
+      
+      Assert.AreEqual(title, result1);
+    }
 
     // [TestMethod]
     // public void SetDescription_SetDescription_String()
