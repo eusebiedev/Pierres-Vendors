@@ -9,17 +9,17 @@ namespace PierresVendors.Tests
   public class OrderTests //: IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Order.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
-    // [TestMethod]
-    // public void ItemConstructor_CreatesInstanceOfItem_Item()
-    // {
-    //   Item newItem = new Item("test");
-    //   Assert.AreEqual(typeof(Item), newItem.GetType());
-    // }
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order();
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 
     // [TestMethod]
     // public void GetDescription_ReturnsDescription_String()
