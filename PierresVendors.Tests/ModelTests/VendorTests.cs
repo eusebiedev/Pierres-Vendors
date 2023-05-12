@@ -70,19 +70,21 @@ namespace PierresVendors.Tests
       Assert.AreEqual(newVendor2, result);
     }
 
-  [TestMethod]
-  public void AddOrder_OrderPlacedFromVendor_OrderList()
-  {
-    string name = "Pierres Bagels";
-    string description = "Authentic bagels from the NW";
-    Vendor newVendor = new Vendor(name, description);
-    List<Order> newList = new List<Order> { newOrder };
-    newVendor.AddOrder(newOrder);
-
-    List<Order> result = newVendor.Orders;
-    CollectionAssert.AreEqual(newList, result);
-  }
-
-
+    [TestMethod]
+    public void AddOrder_OrderPlacedFromVendor_OrderList()
+    {
+      string name = "Pierres Bagels";
+      string description = "Authentic bagels from the NW";
+      Vendor newVendor = new Vendor(name, description);
+      string title = "Pierres Sesame Bagels";
+      string information = "12 sesame bagels";
+      string date = "May 12, 2023";
+      int price = 25;
+      Order newOrder = new Order(title, information, date, price);
+      List<Order> newList = new List<Order> { newOrder };
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
