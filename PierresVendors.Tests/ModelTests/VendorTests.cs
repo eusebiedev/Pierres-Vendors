@@ -79,7 +79,7 @@ namespace PierresVendors.Tests
       string title = "Pierres Sesame Bagels";
       string information = "12 sesame bagels";
       string date = "May 12, 2023";
-      int price = 25;
+      decimal price = 25;
       Order newOrder = new Order(title, information, date, price);
       List<Order> newList = new List<Order> { newOrder };
       newVendor.AddOrder(newOrder);
