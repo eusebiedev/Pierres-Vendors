@@ -66,8 +66,8 @@ namespace PierresVendors.Tests
       string description2 = "Authentic Lox the NW"; 
       Vendor newVendor1 = new Vendor(name1, description1);
       Vendor newVendor2 = new Vendor(name2, description2);
-      Vendor result = Vendor.Find(1);
-      Assert.AreEqual(newVendor1, result);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
     }
 
   // [TestMethod]
