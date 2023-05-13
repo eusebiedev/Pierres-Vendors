@@ -21,3 +21,7 @@ div#header {
 body {
 	background-color: rgb(123, 222, 237);
 }
+
+.container {
+  width: 80%;
+}
